@@ -1,0 +1,7 @@
+@media print {
+  .force-page-break {
+    break-before: page !important;
+    page-break-before: always !important;
+    margin-top: 1em !important;
+  }
+}

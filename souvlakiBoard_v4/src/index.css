@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom override for .border-b to disable border-bottom-width */
+.border-b {
+  border-bottom-width: 0 !important;
+}
+
+/* Custom override for .border-gray-700 */
+.border-gray-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(38 41 47 / 18%);
+}
+
+/* Custom style for .bg-gray-750 */
+.bg-gray-750 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 45 64 / 21%);
+}
+
+.bg-gray-750:active,
+.bg-gray-750:focus {
+  --tw-bg-opacity: 0.8; /* Change opacity to 80% when active or focused */
+  background-color: rgb(50 60 78 / 87%);
+}
+
+/* Custom override for .text-base */
+.text-base {
+  font-size: 0.9rem; /* Set font-size to 0.9rem */
+}
+
+/* Custom style for .p-1.5 */
+.p-1\.5 {
+  padding: 0.0rem; /* Update padding to 0.2rem */
+}
+
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-kerning: normal;
+  font-optical-sizing: auto;
+}
+
+
+
+/*/* Stronger page break control */
+
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media print {
+  .pdf-fullpage-image {
+    height: 297mm !important;
+    width: 210mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    background-size: contain !important;
+    overflow: hidden !important;
+  }
+
+  /* Remove existing fullpage image styles and replace with these */
+  .h-screen {
+    height: 297mm !important;
+  }
+
+
+  
+
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+  
+.pdf-fullpage-image > div {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: contain !important;
+  background-position: top !important;
+}
+
+  
+  .no-print {
+    display: none;
+  }
+
+  .page-header {
+    position: running(header);
+  }
+
+  @page {
+    @top-center {
+      content: element(header);
+    }
+  }
+
+
+/* Added missing closing brace for @media print */
+
+/* Page break control classes */
+.break-inside-avoid {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+
+.page-break-inside-avoid {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Custom style for .bg-gray-850 */
+.bg-gray-850 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(101 114 122 / 14%);
+}
+
+/* Remove spinner from number input fields */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 10;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield; /* For Firefox */
+}
+
+/* Custom style for .space-y-6 */
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-0.9rem * var(--tw-space-y-reverse));
+}
+
+
+
+/* Custom transition class for colors */
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.51, 0.02, 1, 1);
+  transition-duration: 250ms;
+}
+
+/* Custom style for .text-sm */
+.text-sm {
+  font-size: 0.875rem;
+  /* line-height: 1.2; */ /* Uncomment if needed */
+  font-weight: 300;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/* Custom style for .text-gray-300 */
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255); /* Set color to rgb(255 255 255) */
+}
+
+/* Custom style for .text-gray-400 */
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(126 137 157 / 38%); /* Set color to rgb(126 137 157 / 38%) */
+}
+/* Add this to your CSS file */
+
+
+
+
+.no-text-adjust {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
